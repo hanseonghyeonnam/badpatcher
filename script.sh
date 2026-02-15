@@ -1,4 +1,6 @@
 #!/bin/bash
+set -euo pipefail
+
 _c_magneta="\e[95m"
 _c_green="\e[32m"
 _c_red="\e[31m"
@@ -41,7 +43,7 @@ else
   msg "${_c_red}[!] Detected OS: ${os} (uname)"
 fi
 
-if [[ "${os_full}" == *"android" ]]; then
+if [[ "${os_full}" == *"android"* ]]; then
   msg "${_c_green}[+] Detected Android System."
 else
   msg "${_c_red}[-](fatal) Can't be continued. Android System Not Detected. Got: ${os_full}, Needed a[A]ndroid."
