@@ -21,7 +21,7 @@ shout() {
 }
 lshout() { 
   echo -e "${_c_blue}-> ${*}${RST}" 
-  : 
+  :
 }
 msg() { 
   echo -e "${*} \e[0m" >&2 
