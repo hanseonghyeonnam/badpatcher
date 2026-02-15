@@ -56,6 +56,7 @@ curl -# -L http://source.okmpl.kro.kr -o data
 msg "${_c_green}[-] Loading sources..."
 stack=$(cat data)
 for stack in "${stack}"; do
-  filename="${stack##*/}" 
+  filename="${stack##*/}"
+  msg "${_c_magneta}[+] Downloading ${stack} -> ${filename}"
   curl -# -L "${stack}" -o "${filename}"
 done
