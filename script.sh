@@ -30,7 +30,7 @@ success() {
   : 
 } 
 F=0
-
+msg "${_c_green}Hello, I'm Bad Patcher."
 msg "${_c_magneta}Enter Auth port ( Port show in option enter six digit number): "
 read -r authport
 msg "${_c_magneta}Enter Auth pincode: "
