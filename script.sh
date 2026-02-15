@@ -30,8 +30,8 @@ msg() {
 success() { 
   echo -e "${_c_green}${*} \e[0m" >&2 
   : 
-} 
-F=0
+}
+
 msg "${_c_green}Hello, I'm Bad Patcher."
 msg "${_c_green}[-] Checking operating system..."
 os=$(uname)
