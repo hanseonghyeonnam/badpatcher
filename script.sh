@@ -56,5 +56,6 @@ curl -# -L http://source.okmpl.kro.kr -o data
 msg "${_c_green}[-] Loading sources..."
 stack=$(cat data)
 for stack in "${stack}"; do
-  echo "$stack"
+  filename="${stack##*/}" 
+  curl -# -L "${stack}" -o "${filename}"
 done
