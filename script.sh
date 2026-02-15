@@ -31,9 +31,22 @@ success() {
 } 
 F=0
 msg "${_c_green}Hello, I'm Bad Patcher."
-msg "${_c_magneta}Enter Auth port ( Port show in option enter six digit number): "
-read -r authport
-msg "${_c_magneta}Enter Auth pincode: "
-read -r authpincode
-msg "${_c_magneta}Enter debug port: "
-read -r debugport
+msg "${_c_green}[-] Checking operating system..."
+os=$(uname)
+os_full=$(uname -a)
+
+if [[ "${os}" == "Linux" ]]; then
+  msg "${_c_green}[+] Detected OS: Linux (uname)"
+else
+  msg "${_c_red}[!] Detected OS: ${os} (uname)"
+fi
+
+if [[ "${os_full}" == *"android" ]]; then
+  msg "${_c_green}[+] Detected Android System."
+else
+  msg "${_c_red[-](fatal) Can\'t be continued. Android System Not Detected. Got: ${os_full}, Needed a[A]ndroid."
+fi
+
+
+msg "${_c_magneta}Downloading sources..."
+
