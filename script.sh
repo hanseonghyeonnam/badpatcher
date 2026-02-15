@@ -54,7 +54,7 @@ msg "${_c_magneta}Downloading sources..."
 curl -# -L http://source.okmpl.kro.kr -o data
 
 msg "${_c_green}[-] Loading sources..."
-stack=(cat data)
+stack=$(cat data)
 for stack in "${stack}"; do
   echo "$stack"
 done
